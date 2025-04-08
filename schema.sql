@@ -185,7 +185,7 @@
     -- Maintenance and Repairs table
     CREATE TABLE maintenance_repairs (
       id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-      organization_id UUID NOT NULL REFERENCES organizations(id),
+      organization_id UUID NOT NULL REFERENCES vehicles(id),
       vehicle_id UUID NOT NULL REFERENCES vehicles(id),
       service_date DATE,
       description TEXT,
